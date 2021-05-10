@@ -1,0 +1,23 @@
+@use 'src/styles';
+
+div {
+  div.movie {
+    img.moviePoster {
+      width: 300px;
+      height: auto;
+    }
+    div.voteAvg {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      mat-progress-spinner {
+        width: 50px;
+      }
+      h3 {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 25px;
+      }
+    }
+  }
+}
