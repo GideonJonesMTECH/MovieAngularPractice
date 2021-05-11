@@ -27,4 +27,9 @@ export class ApiCallService {
   public getImg(imgURL) {
     return `http://image.tmdb.org/t/p/original${imgURL}`;
   }
+  public getGenres() {
+    return this.http.get(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${this.apiKey}&language=en-US`
+    );
+  }
 }

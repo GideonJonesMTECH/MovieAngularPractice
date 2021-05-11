@@ -10,6 +10,9 @@ import { MaterialModule } from './modules/material.module';
 import { MainComponent } from './components/main/main.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
+import { MovieComponent } from './components/movie/movie.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchedMoviesComponent } from './components/searched-movies/searched-movies.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,8 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
     MainComponent,
     NavBarComponent,
     PopularMoviesComponent,
+    MovieComponent,
+    SearchedMoviesComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,7 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
+    FontAwesomeModule,
   ],
   exports: [MaterialModule],
   providers: [],

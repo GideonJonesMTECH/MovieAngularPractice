@@ -8,7 +8,7 @@ import { ApiCallService } from 'src/app/services/api-call.service';
 })
 export class PopularMoviesComponent implements OnInit {
   constructor(private api: ApiCallService) {}
-  popMovies = [];
+  returnedMovies = [{}];
   ngOnInit(): void {
     this.api.getPopularMovies().subscribe((data) => {
       data = data as any;
@@ -17,6 +17,6 @@ export class PopularMoviesComponent implements OnInit {
     });
   }
   setup(apiReturn) {
-    this.popMovies = apiReturn.results;
+    this.returnedMovies = apiReturn.results;
   }
 }

@@ -1,0 +1,37 @@
+<div *ngIf="movieData != {}">
+  <img
+    id="bkgndImg"
+    src="http://image.tmdb.org/t/p/original{{ movieData.backdrop_path }}"
+  />
+  <mat-card>
+    <img src="http://image.tmdb.org/t/p/original{{ movieData.poster_path }}" />
+    <div class="movieInfo">
+      <h1>{{ movieData.title }}</h1>
+      <h3 *ngIf="movieData.original_title != movieData.title">
+        {{ movieData.original_title }}
+      </h3>
+      <div id="links">
+        <a
+          href="https://www.imdb.com/title/{{ movieData.imdb_id }}"
+          rel="noreferrer"
+          target="_blank"
+          ><fa-icon [icon]="faImdb"></fa-icon
+        ></a>
+        <a
+          *ngIf="movieData.homepage != ''"
+          href="{{ movieData.homepage }}"
+          rel="noreferrer"
+          target="_blank"
+          ><fa-icon [icon]="faLink"></fa-icon
+        ></a>
+      </div>
+      <h4 *ngIf="movieData.tagline != ''">"{{ movieData.tagline }}"</h4>
+      <p>{{ movieData.overview }}</p>
+      <div *ngIf="movieData.budget != 0">
+        <h4>Budget: ${{ movieData.budget }}</h4>
+        <h4>Revenue: ${{ movieData.revenue }}</h4>
+        <h4>Income (Estimated): ${{ movieData.income }}</h4>
+      </div>
+    </div>
+  </mat-card>
+</div>

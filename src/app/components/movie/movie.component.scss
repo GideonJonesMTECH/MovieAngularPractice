@@ -1,0 +1,31 @@
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img#bkgndImg {
+    opacity: 0.5;
+    width: 100vw;
+    position: absolute;
+  }
+  mat-card {
+    display: flex;
+    width: 80vw;
+
+    img {
+      width: 500px;
+      height: fit-content;
+    }
+    .movieInfo {
+      div#links {
+        display: flex;
+        flex-direction: row;
+        a {
+          fa-icon {
+            padding: 0.5em;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
