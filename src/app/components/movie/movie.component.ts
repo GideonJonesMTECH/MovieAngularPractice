@@ -15,6 +15,7 @@ export class MovieComponent implements OnInit {
   faLink = faLink;
   constructor(private route: ActivatedRoute, private api: ApiCallService) {}
   movieData = {};
+  math = Math;
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.api.getMovieById(id).subscribe((data) => {

@@ -1,23 +1,38 @@
 div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  img#bkgndImg {
+
+  #bkgndDiv {
     opacity: 0.5;
     width: 100vw;
     position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   mat-card {
     margin: 10em;
     margin-top: 10em;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
     width: 80vw;
-
-    img {
+    img#moviePoster {
       width: 500px;
       height: fit-content;
     }
-    .movieInfo {
+    div.movieInfo {
+      margin: 2em;
+      display: flex;
+      flex-direction: column;
+      width: calc(80vw - 500px);
       div#links {
         display: flex;
         flex-direction: row;
@@ -25,6 +40,28 @@ div {
           fa-icon {
             padding: 0.5em;
             font-size: 24px;
+          }
+        }
+      }
+      div#budget {
+        display: flex;
+        flex-direction: column;
+      }
+      div#collection {
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
+      div.prodList {
+        h4 {
+        }
+        ul {
+          li {
+            img {
+              width: 150px;
+              height: auto;
+            }
           }
         }
       }
